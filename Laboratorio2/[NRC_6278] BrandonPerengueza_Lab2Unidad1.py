@@ -123,3 +123,9 @@ if __name__ == "__main__":
     print(" ")
     print("************************ BUSQUEDA EN ANCHURA (BFS) ************************")
     print(" ")
+
+    # Ingresa la cantidad de nodos.
+    # transforma a tipo de dato entero.
+    cant_nodos = int(input("Ingrese la cantidad de nodos: "))
+    cant_aristas = int(input("Ingrese la cantidad de aristas: "))
+    print(" ")
