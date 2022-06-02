@@ -51,7 +51,7 @@ class Grafo:
             # Se agrega el peso al nodo 2.
             self.m_lista_adj[nodo2].add((nodo1, peso))
 
-            
+
     def ver_lista_adj(self):
 
         ''' 
@@ -62,3 +62,26 @@ class Grafo:
         for i in self.m_lista_adj.keys():
             # Imprime el nodo segun la lista de adyacencia.
             print("nodo", i, ": ", self.m_lista_adj[i])
+
+    def ba_transversal(self, iniciar_nodo):
+
+        ''' 
+        Función que imprime el recorrido BA (Busqueda en Anchura) a partir de un vértice fuente dado.
+        Recorre los vértices alcanzables desde s.
+            
+            Parametros:
+                iniciar_nodo (str): inicializa el nodo para su recorrido. 
+
+            Retorna:
+                nodo_nuevo (str): nodo vecino que se va a visitar.
+
+        ''' 
+
+        # Conjunto de nodos visitados para evitar bucles.
+        visitado = set()
+        queue = Queue()
+
+        # Añadir el iniciar_nodo a la lista de cola. 
+        queue.put(iniciar_nodo)
+        # Añadir el iniciar_nodo a la lista de visitado.
+        visitado.add(iniciar_nodo)
