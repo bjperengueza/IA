@@ -101,3 +101,25 @@ class Grafo:
                     queue.put(nodo_nuevo)
                     # Marcado como visitado.
                     visitado.add(nodo_nuevo)
+
+                    # **************** EJEMPLO ***********************
+if __name__ == "__main__":
+    
+    ''' 
+    Crea una instancia de la clase "Grafo"
+    El grafo sera no dirigido y contara con n nodos y n asintoras segun las que el usuario ingrese
+    Imprimira la lista de adyacencia de la forma:
+        
+        Parametros:
+            cant_nodos (int): Un entero positivo
+            cant_aristas(int): Un entero positivo
+
+        
+        Retorna:
+            g_1 (str): Lista de adyancencia 
+
+    ''' 
+    # Mensaje de Inicio
+    print(" ")
+    print("************************ BUSQUEDA EN ANCHURA (BFS) ************************")
+    print(" ")
