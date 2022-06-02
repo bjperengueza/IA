@@ -129,3 +129,18 @@ if __name__ == "__main__":
     cant_nodos = int(input("Ingrese la cantidad de nodos: "))
     cant_aristas = int(input("Ingrese la cantidad de aristas: "))
     print(" ")
+
+    # Instancia la clase "Grafo" con los valores respectivos.
+    g_1 = Grafo(cant_nodos, dirigido=False)
+
+    # Recorre una variable en un rango de 0 hasta la cantidad de nodos ingresados.
+    for s in range (0, cant_aristas ):
+
+        # Solicita el primer dato de la clase "Grafo".
+        nodo_inicio = int(input("Digite el nodo de inicio: "))
+        # Solicita el segundo dato de la clase "Grafo".
+        nodo_destin = int(input("Digite el nodo de destino: "))
+        # Agrega los dos valores a la clase "Grafo".
+        g_1.agg_borde(nodo_inicio, nodo_destin)
+        # Numero de arista
+        print ("Arista ", s)
