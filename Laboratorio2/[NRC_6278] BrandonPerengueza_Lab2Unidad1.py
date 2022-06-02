@@ -144,3 +144,12 @@ if __name__ == "__main__":
         g_1.agg_borde(nodo_inicio, nodo_destin)
         # Numero de arista
         print ("Arista ", s)
+        
+    # Imprime la lista de adyacencia en la forma nodo n: {(nodo, peso)}
+    g_1.ver_lista_adj()
+
+    # Imprime el mensaje de solución
+    print ("A continuación se muestra la primera travesía en anchura"
+                    " (empezando por el vértice 0)")
+    g_1.ba_transversal(0)
+    print()
