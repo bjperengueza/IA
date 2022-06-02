@@ -85,3 +85,19 @@ class Grafo:
         queue.put(iniciar_nodo)
         # Añadir el iniciar_nodo a la lista de visitado.
         visitado.add(iniciar_nodo)
+
+        # Mientras la cola no este vacia. 
+        while not queue.empty():
+            # Descola a un vértice de cola. 
+            nodo_actual = queue.get()
+            # Imprime el vertice.
+            print(nodo_actual, end = " ")
+
+            # Obtener todos los vértices adyacentes del vértice de la cola.   
+            for (nodo_nuevo, peso) in self.m_lista_adj[nodo_actual]:
+                # Si un vértice adyacente no ha sido visitado.
+                if nodo_nuevo not in visitado:
+                    # Marcado como en cola.
+                    queue.put(nodo_nuevo)
+                    # Marcado como visitado.
+                    visitado.add(nodo_nuevo)
