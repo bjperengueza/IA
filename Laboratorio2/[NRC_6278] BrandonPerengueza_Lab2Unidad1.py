@@ -50,4 +50,15 @@ class Grafo:
         if not self.m_dirigido:
             # Se agrega el peso al nodo 2.
             self.m_lista_adj[nodo2].add((nodo1, peso))
-    
+
+            
+    def ver_lista_adj(self):
+
+        ''' 
+        Imprime la representación del Grafo segun el listado de adyacencia.
+        '''
+
+        # Recorre el diccionario para implementar una lista de adyacencia.
+        for i in self.m_lista_adj.keys():
+            # Imprime el nodo segun la lista de adyacencia.
+            print("nodo", i, ": ", self.m_lista_adj[i])
