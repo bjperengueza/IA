@@ -50,7 +50,7 @@ class Grafo:
         if not self.m_dirigido:
             # Se agrega el peso al nodo 2.
             self.m_lista_adj[nodo2].add((nodo1, peso))
-            
+
     def ver_lista_adj(self):
  
         '''
@@ -60,3 +60,16 @@ class Grafo:
         for key in self.m_lista_adj.keys():
             # Imprime el nodo segun la lista de adyacencia.
             print("nodo", key, ": ", self.m_lista_adj[key])
+
+    def dfs(self, iniciar, objetivo, ruta = [], visitado = set()):
+        ruta.append(iniciar)
+        visitado.add(iniciar)
+        if iniciar == objetivo:
+            return ruta
+        for (n_vecino, peso) in self.m_lista_adj[iniciar]:
+            if n_vecino not in visitado:
+                resultado = self.dfs(n_vecino, objetivo, ruta, visitado)
+                if resultado is not None:
+                    return resultado
+        ruta.pop()
+        return None
