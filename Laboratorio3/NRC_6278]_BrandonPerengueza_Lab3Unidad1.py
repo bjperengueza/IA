@@ -29,7 +29,7 @@ class Grafo:
         # Representación de Grafo - Lista de adyacencia.
         # Utilizamos un diccionario para implementar una lista de adyacencia.
         self.m_lista_adj = {nodo: set() for nodo in self.m_nodos}  
-        
+
     def agg_borde(self, nodo1, nodo2, peso=1):
        
         '''
@@ -50,3 +50,13 @@ class Grafo:
         if not self.m_dirigido:
             # Se agrega el peso al nodo 2.
             self.m_lista_adj[nodo2].add((nodo1, peso))
+            
+    def ver_lista_adj(self):
+ 
+        '''
+        Imprime la representación del Grafo segun el listado de adyacencia.
+        '''
+        # Recorre el diccionario para implementar una lista de adyacencia.
+        for key in self.m_lista_adj.keys():
+            # Imprime el nodo segun la lista de adyacencia.
+            print("nodo", key, ": ", self.m_lista_adj[key])
