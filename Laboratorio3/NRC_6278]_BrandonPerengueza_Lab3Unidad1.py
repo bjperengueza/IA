@@ -101,3 +101,32 @@ if __name__ == "__main__":
     cant_nodos = int(input("Ingrese la cantidad de nodos: "))
     cant_aristas = int(input("Ingrese la cantidad de aristas: "))
     print(" ")
+
+    # Instancia la clase "Grafo" con los valores respectivos.
+    graf_1 = Grafo(cant_nodos, dirigido=False)
+ 
+    # Recorre una variable en un rango de 0 hasta la cantidad de nodos ingresados.
+    for s in range (0, cant_aristas ):
+ 
+        # Solicita el primer dato de la clase "Grafo".
+        nodo_inicio = int(input("Digite el nodo de inicio: "))
+        # Solicita el segundo dato de la clase "Grafo".
+        nodo_destin = int(input("Digite el nodo de destino: "))
+        # Agrega los dos valores a la clase "Grafo".
+        graf_1.agg_borde(nodo_inicio, nodo_destin)
+        # Numero de arista
+        print ("Arista ", s)
+ 
+    print("")
+    print("Ingrese la ruta que deseé buscar.")
+    rut_inicio = int(input("Ingrese el nodo de partida: "))
+    rut_llegada = int(input("Ingrese el nodo de llegada: "))
+    print("")
+ 
+    # Imprime la lista de adyacencia en la forma nodo n: {(nodo, peso)}
+    graf_1.ver_lista_adj()
+
+    # Imprime la ruta transversal del nodo
+    ruta_transversal = []
+    ruta_transversal = graf_1.dfs(rut_inicio, rut_llegada)
+    print(f" La ruta transversal del nodo raiz al nodo destino es: {ruta_transversal}")
