@@ -62,15 +62,37 @@ class Grafo:
             print("nodo", key, ": ", self.m_lista_adj[key])
 
     def dfs(self, iniciar, objetivo, ruta = [], visitado = set()):
+
+        ''' 
+        Función que imprime el recorrido BP (Busqueda en Profundidad) a partir de un vértice fuente dado.
+        Recorre los vértices alcanzables desde s.
+            
+            Parametros:
+                iniciar (str): inicializa el nodo para su recorrido. 
+
+            Retorna:
+                resultado (str): nodo vecino que se va a visitar.
+
+        ''' 
+        # Añadir el iniciar a la lista de la ruta.
         ruta.append(iniciar)
+        # Añadir el iniciar a la lista de visitado.
         visitado.add(iniciar)
+        # Si iniciar es igual a objetivo
         if iniciar == objetivo:
+            # Retorna la ruta de nodos
             return ruta
+        # Se establece el nodo vecino y el peso en la lista de adyacencia
         for (n_vecino, peso) in self.m_lista_adj[iniciar]:
+            # Si el nodo vecino no a sido visitado
             if n_vecino not in visitado:
+                # Se llama a la funcion de forma recursiva
                 resultado = self.dfs(n_vecino, objetivo, ruta, visitado)
+                # Si el resultado no se encontro
                 if resultado is not None:
+                    # Retorna la ruta transversal
                     return resultado
+        # Las ramas vecinas del nodo actual han sido visitadas
         ruta.pop()
         return None
 
