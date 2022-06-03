@@ -73,3 +73,31 @@ class Grafo:
                     return resultado
         ruta.pop()
         return None
+
+if __name__ == "__main__":
+ 
+    ''' 
+    Crea una instancia de la clase "Grafo"
+    El grafo sera no dirigido y contara con n nodos y n asintoras segun las que el usuario ingrese
+    Imprimira la lista de adyacencia de la forma:
+        
+        Parametros:
+            cant_nodos (int): Un entero positivo
+            cant_aristas(int): Un entero positivo
+
+        
+        Retorna:
+            graf_1 (str): ruta transversal 
+
+    '''
+ 
+     # Mensaje de Inicio
+    print(" ")
+    print("************************ BUSQUEDA EN ANCHURA (BFS) ************************")
+    print(" ")
+ 
+    # Ingresa la cantidad de nodos.
+    # transforma a tipo de dato entero.
+    cant_nodos = int(input("Ingrese la cantidad de nodos: "))
+    cant_aristas = int(input("Ingrese la cantidad de aristas: "))
+    print(" ")
