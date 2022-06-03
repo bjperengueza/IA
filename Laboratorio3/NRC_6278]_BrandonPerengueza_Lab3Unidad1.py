@@ -115,7 +115,7 @@ if __name__ == "__main__":
  
      # Mensaje de Inicio
     print(" ")
-    print("************************ BUSQUEDA EN ANCHURA (BFS) ************************")
+    print("************************ BUSQUEDA EN PROFUNDIDAD (DFS) ************************")
     print(" ")
  
     # Ingresa la cantidad de nodos.
