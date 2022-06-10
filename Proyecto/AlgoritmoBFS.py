@@ -71,3 +71,30 @@ if __name__ == '__main__':
          (1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (5, 11), (5, 12), (6, 13), (3, 7), (3, 8), (7, 14),
          (7, 15), (8, 16), (8, 17), (4, 9), (4, 10), (9, 18), (9, 19), (10, 20),
     ]
+
+    
+    print("")
+    # imprime la lista de parcelas relacionadas
+    print("Las Rutas de las Parcelas son las siguientes:")
+    print(bordes)
+
+    # número total de parcelas que se busca recorrer
+    n = int(input("Ingrese el total de parcelas que desea recorrer: "))
+    print("")
+
+    # parcela inicial desde donde se desea iniciar el recorrido
+    inic = int(input("Ingrese la parcela inicial: "))
+    print("")
+
+    # construye un gráfico a partir de los bordes dados
+    grafo = grafo(bordes, n)
+ 
+    # para realizar un seguimiento de si se descubre un vértice o no
+    visitado = [False] * n
+ 
+    # Realizar el recorrido BFS de todos los nodos no visitados y
+    # cubre todos los componentes conectados de un gráfico
+    if not visitado[inic]:
+        # inicia el recorrido BFS desde el vértice inic
+        print("El recorrido a realizar es el siguiente:")
+        BFS(grafo, inic, visitado)
