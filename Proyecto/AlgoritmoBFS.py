@@ -53,3 +53,21 @@ def BFS(grafo, v, visitado):
                 # marcarlo como descubierto y ponerlo en cola
                 visitado[u] = True
                 q.append(u)
+
+if __name__ == '__main__':
+
+    '''
+    Clase principal donde se ejecutaran las funciones previamente creadas
+
+    '''
+ 
+    # Lista de bordes de gráficos según el diagrama anterior
+    print("")
+    print("********************** RECORRIDO DE LAS PARCELAS **********************")
+    print("")
+
+    # Lista de bordes de gráficos según el grafo establecido
+    bordes = [
+         (1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (5, 11), (5, 12), (6, 13), (3, 7), (3, 8), (7, 14),
+         (7, 15), (8, 16), (8, 17), (4, 9), (4, 10), (9, 18), (9, 19), (10, 20),
+    ]
