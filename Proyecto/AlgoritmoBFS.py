@@ -41,3 +41,15 @@ def BFS(grafo, v, visitado):
     visitado[v] = True
     # poner en cola el vértice fuente.
     q.append(v)
+
+    # Bucle (whi22lrepetitivo hasta que la cola esté vacía.
+    while q:
+        # quitar la cola del nodo frontal e imprimirlo.
+        v = q.popleft()
+        print(v, end=' ')
+        # do para cada arista (v, u)
+        for u in grafo.lista_adja[v]:
+            if not visitado[u]:
+                # marcarlo como descubierto y ponerlo en cola
+                visitado[u] = True
+                q.append(u)
