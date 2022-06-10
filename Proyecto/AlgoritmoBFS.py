@@ -25,3 +25,19 @@ class grafo:
         for (origen, destino) in bordes:
             self.lista_adja[origen].append(destino)
             self.lista_adja[destino].append(origen)
+
+# Realizar BFS en el gráfico a partir del vértice `v`
+def BFS(grafo, v, visitado):
+
+    '''
+    Función que realiza el recorrido de busqueda en anchura
+    @param v: una tupla representativa de los nodos. 
+    @param visitado: estado actual del nodo de tipo boolean.
+
+    '''
+    # crea una cola para hacer la busqueda.
+    q = deque()
+    # marca el vértice de origen como visitado.
+    visitado[v] = True
+    # poner en cola el vértice fuente.
+    q.append(v)
