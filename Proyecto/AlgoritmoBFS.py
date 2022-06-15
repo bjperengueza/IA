@@ -80,16 +80,25 @@ if __name__ == '__main__':
     print("")
 
     # Lista de bordes de gráficos según el grafo establecido
+    b_inic =[(1, 2), (1, 3), (1, 4)]
+    b_sec_uno = [(2, 5), (2, 6), (5, 11), (5, 12), (6, 13)]
+    b_sec_dos = [(3, 7), (3, 8), (7, 14),(7, 15), (8, 16), (8, 17)]
+    b_sec_tres = [(4, 9), (4, 10), (9, 18), (9, 19), (10, 20)]
+
     bordes = [
          (1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (5, 11), (5, 12), (6, 13), (3, 7), (3, 8), (7, 14),
-         (7, 15), (8, 16), (8, 17), (4, 9), (4, 10), (9, 18), (9, 19), (10, 20),
+         (7, 15), (8, 16), (8, 17), (4, 9), (4, 10), (9, 18), (9, 19), (10, 20)
     ]
 
-    
     print("")
     # imprime la lista de parcelas relacionadas
     print("Las Rutas de las Parcelas son las siguientes:")
-    print(bordes)
+    print("")
+    print("Ruta inicial: ", b_inic)
+    print("Sección 1: ", b_sec_uno)
+    print("Sección 2: ", b_sec_dos)
+    print("Sección 3: ", b_sec_tres)
+    print("") 
 
     # número total de parcelas que se busca recorrer
     n = int(input("Ingrese el total de parcelas que desea recorrer: "))
