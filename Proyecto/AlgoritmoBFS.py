@@ -42,7 +42,7 @@ def BFS(grafo, v, visitado):
     # poner en cola el vértice fuente.
     q.append(v)
 
-    # Bucle (whi22lrepetitivo hasta que la cola esté vacía.
+    # Bucle (while repetitivo hasta que la cola esté vacía).
     while q:
         # quitar la cola del nodo frontal e imprimirlo.
         v = q.popleft()
